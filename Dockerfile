@@ -45,6 +45,8 @@ RUN dpkg --add-architecture i386 && \
     liblzo2-dev \
     telnet \
     squashfs-tools \
+    libgmp3-dev \ 
+    libmpc-dev \
     exiftool && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
@@ -67,5 +69,10 @@ RUN git clone https://github.com/radareorg/radare2  && \
 # install oh-my-zsh
 RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
     sed -i 's/robbyrussell/ys/g' /root/.zshrc
+
+# RsaCtfTool
+RUN git clone https://github.com/Ganapati/RsaCtfTool.git && \
+    cd RsaCtfTool && \
+    pip3 install -r "requirements.txt"
 
 CMD ["/bin/zsh"]
