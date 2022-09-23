@@ -1,5 +1,9 @@
 # Dockerfile for CTF challenges
 
+## What is included?
+
+Different tools for different types of challenges. It mainly includes tools for reverse-engineering (e.g., radare2), forensics (e.g., exiftool), and pwn (e.g., pwntools).
+
 ## Usage
 
 Build the container on your host system. `ctf:ubuntu22.04` is the name of the container:
