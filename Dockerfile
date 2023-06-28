@@ -75,4 +75,9 @@ RUN git clone https://github.com/Ganapati/RsaCtfTool.git && \
     cd RsaCtfTool && \
     pip3 install -r "requirements.txt"
 
+# sleuthkit
+RUN git clone https://github.com/sleuthkit/sleuthkit.git
+RUN cd /sleuthkit && ./bootstrap && ./configure && make && make install
+
+
 CMD ["/bin/zsh"]

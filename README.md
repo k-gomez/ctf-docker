@@ -32,3 +32,7 @@ Stop the container:
 ```
 sudo docker stop <container-id>
 ```
+
+# Credits
+
+LiveOverflow for the initial dockerfile: [his docker YouTube video](https://www.youtube.com/watch?v=cPGZMt4cJ0I&pp=ygUKY3RmIGRvY2tlcg%3D%3D)
